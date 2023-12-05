@@ -1,6 +1,6 @@
 # Define the provider for AWS
 provider "aws" {
-  region = "eu-west-2"  
+  region = "us-east-1"  
 }
 
 # Create an ECS cluster
@@ -20,7 +20,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 [
   {
     "name": "my-container",
-    "image": "335871625378.dkr.ecr.eu-west-2.amazonaws.com/netflix-app:latest",  
+    "image": "nginx:latest",  
     "portMappings": [
       {
         "containerPort": 80,
